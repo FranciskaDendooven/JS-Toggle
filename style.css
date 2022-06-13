@@ -7,4 +7,9 @@
 
 .hidden {
   visibility: hidden;
+}
+
+img {
+  width: 50%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

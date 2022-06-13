@@ -8,6 +8,7 @@ const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
 const inputName = document.querySelector("#name");
 const displayName = document.querySelector("#displayName");
+let img = document.querySelector("img");
 window.onload = () =>{
 document.querySelector("#phaseOne").style.visibility = "visible";
 document.querySelector("#phaseTwo").style.visibility = "hidden";
@@ -36,14 +37,30 @@ button1.addEventListener("click", () => {
 displayName.innerText = "Hi, " + inputName.value;
 });
 
-//display coffee or tea
-
+//Display coffee or tea
 const thirdStep = () => {
     document.querySelector("#phaseOne").style.visibility = "hidden";
     document.querySelector("#phaseTwo").style.visibility = "hidden";
     document.querySelector("#phaseThree").style.visibility = "hidden";
     document.querySelector("#phaseFour").style.visibility = "visible";
+/*     document.querySelector("#coffee").style.visibility = "hidden";
+    document.querySelector("#tea").style.visibility = "hidden"; */
 };
+
+/* const yesNo = document.querySelector("#coffeeYesNo");
+yesNo.addEventListener("click", () =>{
+}); */
+
+const yesNo = document.querySelector("#coffeeYesNo");
+const displayImg = () => {
+    let img = document.querySelector("img");
+    let value = yesNo.value;
+    if (value == "true"){
+        img.src = "img/coffee.jpg";
+    }
+};
+
+displayImg();
 
 button2.addEventListener("click", thirdStep);
 
