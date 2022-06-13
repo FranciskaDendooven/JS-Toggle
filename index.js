@@ -6,7 +6,8 @@ const button0 = document.querySelector(".button0");
 const button1 = document.querySelector(".button1");
 const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
-
+const inputName = document.querySelector("#name");
+const displayName = document.querySelector("#displayName");
 window.onload = () =>{
 document.querySelector("#phaseOne").style.visibility = "visible";
 document.querySelector("#phaseTwo").style.visibility = "hidden";
@@ -31,6 +32,11 @@ const secondStep = () => {
 };
 
 button1.addEventListener("click", secondStep);
+button1.addEventListener("click", () => {
+displayName.innerText = "Hi, " + inputName.value;
+});
+
+//display coffee or tea
 
 const thirdStep = () => {
     document.querySelector("#phaseOne").style.visibility = "hidden";
