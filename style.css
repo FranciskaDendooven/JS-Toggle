@@ -1,0 +1,10 @@
+.active {
+  background-color: lightblue;
+  display: block;
+  margin: 15px;
+  padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
